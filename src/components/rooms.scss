@@ -1,0 +1,30 @@
+@import 'constants';
+
+.Rooms {
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100vh - #{$header-height});
+  max-height: calc(100vh - #{$header-height});
+  overflow: scroll;
+  width: 100%;
+
+  &-loading {
+    display: none;
+    height: 27px;
+    left: 50%;
+    position: absolute;
+    top: 10px;
+    transform: translateX(-50%);
+    width: 27px;
+
+    &.-show {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Rooms {
+    display: block;
+  }
+}

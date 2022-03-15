@@ -1,0 +1,23 @@
+@import 'constants';
+
+.Overlay {
+  background: #34495e;
+  bottom: 0;
+  height: calc(100vh - #{$header-height});
+  left: 0;
+  position: absolute;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  width: 100vw;
+  z-index: 99;
+
+  &.-hide {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.-show {
+    opacity: 0.5;
+    visibility: visible;
+  }
+}

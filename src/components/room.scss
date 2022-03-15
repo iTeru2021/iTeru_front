@@ -1,0 +1,93 @@
+.Room {
+  box-sizing: border-box;
+  display: block;
+  font-size: 1.8em;
+  height: 200px;
+  margin: 20px;
+  padding: 10px;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+  width: 200px;
+
+  &.-open {
+    //background: #2ecc71;
+  }
+
+  &.-close {
+    //background: #bdc3d7;
+  }
+
+  &.-hide {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  &.-show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &.-ok{
+    background: #2ecc71;
+  }
+  &.-warn{
+    background: orange;
+  }
+  &.-danger{
+    background: tomato;
+  }
+
+  &-roomName {
+    font-size: 2.4rem;
+    margin-bottom: 0.3rem;
+  }
+
+  &-elapsedTime {
+    font-size: 2rem;
+  }
+
+  &-icon {
+    height: 96px;
+    margin-left: 90px;
+    margin-top: 32px;
+    width: 96px;
+  }
+  &-co2{
+    font-size: 2rem;
+    color: balck;
+
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .Room {
+    box-sizing: border-box;
+    display: flex;
+    font-size: 1.8em;
+    height: 115px;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 0;
+    width: calc(100vw - 40px);
+
+    &-leftSide {
+      padding-left: 10px;
+      padding-top: 10px;
+    }
+
+    &-roomName {
+      font-size: 2.4rem;
+      margin-bottom: 0.3rem;
+    }
+
+    &-elapsedTime {
+      font-size: 2rem;
+    }
+
+    &-icon {
+      height: 96px;
+      margin: 12px 10px 0 0;
+      width: 96px;
+    }
+  }
+}

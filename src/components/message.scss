@@ -1,0 +1,21 @@
+.Message {
+  align-items: center;
+  background-color: #55efc4;
+  display: flex;
+  transition: all 0.3s ease-out;
+  width: 100%;
+
+  &.-open {
+    height: 50px;
+    opacity: 100%;
+  }
+
+  &.-close {
+    height: 0;
+    opacity: 0%;
+  }
+
+  &.-error {
+    background-color: #ff7675;
+  }
+}
