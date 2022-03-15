@@ -8,14 +8,7 @@
   -webkit-transition: all 0.4s ease-out;
   transition: all 0.4s ease-out;
   width: 200px;
-
-  &.-open {
-    //background: #2ecc71;
-  }
-
-  &.-close {
-    //background: #bdc3d7;
-  }
+  border-radius: 10px;
 
   &.-hide {
     opacity: 0;
@@ -30,10 +23,10 @@
     background: #2ecc71;
   }
   &.-warn{
-    background: orange;
+    background: #ECD235;
   }
   &.-danger{
-    background: tomato;
+    background: #F87926;
   }
 
   &-roomName {
@@ -48,7 +41,7 @@
   &-icon {
     height: 96px;
     margin-left: 90px;
-    margin-top: 32px;
+    margin-top: 16px;
     width: 96px;
   }
   &-co2{

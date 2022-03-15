@@ -38,19 +38,15 @@ const Room: FC<RoomProps> = ({
 
   return (
     <div
-      className={`Room ${isUsing ? "-close" : "-open"} 
-        ${ isShow ? "-show" : "-hide" }
-        ${ co2 < 500 ? "-ok"
-          :co2 < 1000 ? "-warn" : "-danger"
-         }`} 
+      className={`Room ${isUsing ? "-close" : "-open"}
+        ${isShow ? "-show" : "-hide"}
+        ${co2 < 500 ? "-ok" : co2 < 1000 ? "-warn" : "-danger"}`}
     >
       <div className="Room-leftSide">
         <h1 className="Room-roomName">{roomName}</h1>
         <p className="Room-elapsedTime">{elapsedTimeString}</p>
-        <p className={`Room-co2 ${ co2 < 500 ? "-ok"
-      :co2 < 1000 ? "-warn" : "-danger"
-      } `}
-      >{co2}ppm</p>
+        {/* <p className={`Room-co2 ${co2 < 500 ? "-ok" : co2 < 1000 ? "-warn" : "-danger"} `}> */}
+        {/* {co2}ppm</p> */}
       </div>
       <img
         className="Room-icon"
