@@ -1,11 +1,11 @@
-import { RoomState } from "../constants";
+import { RoomState } from "../../constants";
 
 // API Rooms
 interface APIRoom {
   roomName: string;
   isUsing: boolean;
   timestamp: string;
-  ppm: string;
+  co2: string;
 }
 
 const translateAPIRoom = (apiResult: APIRoom[]): RoomState[] => {

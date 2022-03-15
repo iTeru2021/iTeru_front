@@ -5,7 +5,7 @@ interface APIRoom {
   roomName: string;
   isUsing: boolean;
   timestamp: string;
-  ppm: string;
+  co2: string;
 }
 
 const translateAPIRoom = (apiResult: APIRoom[]): RoomState[] => {

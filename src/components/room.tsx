@@ -14,7 +14,7 @@ const Room: FC<RoomProps> = ({
   roomName = "",
   isUsing = true,
   elapsedMinutes = 0,
-  co2
+  co2 = ""
 }) => {
   // elapsedMinutes allows more than 61 minutes.
   const hours: number =
@@ -25,6 +25,8 @@ const Room: FC<RoomProps> = ({
   if (isUsing) elapsedTimeString = "　";
   else if (hours === 0) elapsedTimeString = `${minutes}分`;
   else elapsedTimeString = `${hours}時間${minutes}分`;
+
+  const ppm: number = parseInt(co2);
 
   // 最初だけ隠しておいて、表示アニメーションする
   // Note: react-transition-group@1.x を使う方がよさげ
@@ -40,13 +42,12 @@ const Room: FC<RoomProps> = ({
     <div
       className={`Room ${isUsing ? "-close" : "-open"}
         ${isShow ? "-show" : "-hide"}
-        ${co2 < 500 ? "-ok" : co2 < 1000 ? "-warn" : "-danger"}`}
+        ${ppm < 500 ? "-ok" : ppm < 1000 ? "-warn" : "-danger"}`}
     >
       <div className="Room-leftSide">
         <h1 className="Room-roomName">{roomName}</h1>
         <p className="Room-elapsedTime">{elapsedTimeString}</p>
-        {/* <p className={`Room-co2 ${co2 < 500 ? "-ok" : co2 < 1000 ? "-warn" : "-danger"} `}> */}
-        {/* {co2}ppm</p> */}
+        <p>{co2}ppm</p>
       </div>
       <img
         className="Room-icon"
